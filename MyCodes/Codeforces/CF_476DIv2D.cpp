@@ -1,0 +1,32 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+
+    string *str = new string[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>str[i];
+    }
+
+
+
+       for (int i = 0; i < n-1; i++)
+       {
+           for (int j = 0; j < n-i-1; j++)
+           {
+               if (str[j].length() > str[j+1].length())
+                  swap(str[j], str[j+1]);
+           }
+
+       }
+       for(int i=0;i<n;i++)
+    {
+        cout<<str[i]<<endl;
+    }
+
+
+}
